@@ -1,9 +1,19 @@
-class Stopwatch {
-  constructor(display) {
-    this.running = false;
-    this.display = display;
-    this.reset();
-    this.print(this.times);
+// KLASA I USTAWIENIE POCZĄTKOWEGO STANU KOMPONENTU
+class Stopwatch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      running: false,
+      times: {
+        minutes: 0,
+        seconds: 0,
+        miliseconds: 0
+      }
+    }
+    // this.running = false;
+    // this.display = display;
+    // this.reset();
+    // this.print(this.times);
   }
 
   // Zerowanie stopera
