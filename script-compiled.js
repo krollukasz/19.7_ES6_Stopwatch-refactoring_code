@@ -25,6 +25,7 @@ var Stopwatch = function (_React$Component) {
         miliseconds: 0
       }
     };
+    _this.start = _this.start.bind(_this);
     return _this;
   }
 
@@ -32,6 +33,15 @@ var Stopwatch = function (_React$Component) {
     key: "start",
     value: function start() {
       console.log('start!');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "button",
+        { onClick: this.start },
+        this.state.running = true
+      );
     }
   }, {
     key: "render",

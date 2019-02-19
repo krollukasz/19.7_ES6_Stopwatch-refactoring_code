@@ -10,9 +10,17 @@ class Stopwatch extends React.Component {
         miliseconds: 0
       }
     }
+    this.start = this.start.bind(this);
   }
   start() {
     console.log('start!');
+  }
+  render() {
+    return (
+      <button onClick={this.start}>
+        {this.state.running = true}
+      </button>
+    );
   }
   render() {
     return (
