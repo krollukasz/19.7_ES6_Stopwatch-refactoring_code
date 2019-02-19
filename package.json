@@ -25,6 +25,7 @@
   "homepage": "https://github.com/krollukasz/19.7_ES6_Stopwatch-refactoring_code#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-latest": "^6.24.1"
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
   }
 }
