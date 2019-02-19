@@ -1,0 +1,30 @@
+{
+  "name": "ES6_Stopwatch_App",
+  "version": "1.0.0",
+  "description": "ES6 amd babel first run\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[3~n",
+  "main": "script.js",
+  "scripts": {
+    "start": "babel script.js --watch --out-file script-compiled.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krollukasz/19.7_ES6_Stopwatch-refactoring_code.git"
+  },
+  "keywords": [
+    "ES6",
+    "React",
+    "Babel",
+    "learning"
+  ],
+  "author": "Łukasz Król",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krollukasz/19.7_ES6_Stopwatch-refactoring_code/issues"
+  },
+  "homepage": "https://github.com/krollukasz/19.7_ES6_Stopwatch-refactoring_code#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1"
+  }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Acme";
+  font-size: 48px;
+  background-image: url(time.jpg);
+  background-repeat: no-repeat;
+}
+
+.controls {
+  margin-top: 40px;
+}
+
+.button {
+  width: auto;
+  padding: 10px;
+  color: #000000;
+  background-color: slategrey;
+  border-radius: 6px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.stopwatch {
+  margin-top: 25px;
+  width: 300px;
+  text-align: center;
+  background-color: slategrey
+}
