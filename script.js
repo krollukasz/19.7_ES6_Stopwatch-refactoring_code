@@ -15,6 +15,12 @@ class Stopwatch extends React.Component {
     // this.reset();
     // this.print(this.times);
   }
+    render() {
+      return (
+        document.getElementById("app")
+      );
+    }
+  }
 
   // Zerowanie stopera
   reset() {
