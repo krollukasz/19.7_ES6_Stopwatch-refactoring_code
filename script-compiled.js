@@ -29,6 +29,11 @@ var Stopwatch = function (_React$Component) {
   }
 
   _createClass(Stopwatch, [{
+    key: "start",
+    value: function start() {
+      console.log('start!');
+    }
+  }, {
     key: "render",
     value: function render() {
       return React.createElement(
@@ -61,3 +66,5 @@ var Stopwatch = function (_React$Component) {
 
   return Stopwatch;
 }(React.Component);
+
+ReactDOM.render(React.createElement(Stopwatch, null), document.getElementById("app"));

@@ -11,6 +11,9 @@ class Stopwatch extends React.Component {
       }
     }
   }
+  start() {
+    console.log('start!');
+  }
   render() {
     return (
       <div>
