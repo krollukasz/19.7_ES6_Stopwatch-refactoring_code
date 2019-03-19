@@ -15,33 +15,36 @@ class Stopwatch extends React.Component {
     // this.reset = this.reset.bind(this);
   }
 
-  format(times) {
+  format() {
     return `${pad0(this.state.times.minutes)}:${pad0(this.state.times.seconds)}:${pad0(Math.floor(this.state.times.miliseconds))}`;
   }
 
   start() {
-    if (!this.running) {
+    if (!this.state.running) {
       this.setState({running: true});
       this.watch = setInterval(() => this.step(), 10);
     }
   }
 
-  step() {
-    if (!this.state.running) return;
-    this.calculate();
-  }
-
   // Przeliczenie czasu
   calculate() {
-    this.times.miliseconds += 1;
-    if (this.times.miliseconds >= 100) {
-      this.times.seconds += 1;
-      this.times.miliseconds = 0;
+    let {minutes, seconds, miliseconds} = this.state.times;
+    miliseconds += 1;
+    if (miliseconds >= 100) {
+      seconds += 1;
+      miliseconds = 0;
     }
-    if (this.times.seconds >= 60) {
-      this.times.minutes += 1;
-      this.times.seconds = 0;
+    if (seconds >= 60) {
+      minutes += 1;
+      seconds = 0;
     }
+    this.setState({
+      times: {
+        miliseconds,
+        seconds,
+        minutes,
+      }
+    })
   }
   
   stop() {

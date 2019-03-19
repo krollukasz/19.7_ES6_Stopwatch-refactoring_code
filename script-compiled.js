@@ -32,7 +32,7 @@ var Stopwatch = function (_React$Component) {
 
   _createClass(Stopwatch, [{
     key: "format",
-    value: function format(times) {
+    value: function format() {
       return pad0(this.state.times.minutes) + ":" + pad0(this.state.times.seconds) + ":" + pad0(Math.floor(this.state.times.miliseconds));
     }
   }, {
@@ -40,18 +40,12 @@ var Stopwatch = function (_React$Component) {
     value: function start() {
       var _this2 = this;
 
-      if (!this.running) {
+      if (!this.state.running) {
         this.setState({ running: true });
         this.watch = setInterval(function () {
           return _this2.step();
         }, 10);
       }
-    }
-  }, {
-    key: "step",
-    value: function step() {
-      if (!this.state.running) return;
-      this.calculate();
     }
 
     // Przeliczenie czasu
@@ -59,15 +53,27 @@ var Stopwatch = function (_React$Component) {
   }, {
     key: "calculate",
     value: function calculate() {
-      this.times.miliseconds += 1;
-      if (this.times.miliseconds >= 100) {
-        this.times.seconds += 1;
-        this.times.miliseconds = 0;
+      var _state$times = this.state.times,
+          minutes = _state$times.minutes,
+          seconds = _state$times.seconds,
+          miliseconds = _state$times.miliseconds;
+
+      miliseconds += 1;
+      if (miliseconds >= 100) {
+        seconds += 1;
+        miliseconds = 0;
       }
-      if (this.times.seconds >= 60) {
-        this.times.minutes += 1;
-        this.times.seconds = 0;
+      if (seconds >= 60) {
+        minutes += 1;
+        seconds = 0;
       }
+      this.setState({
+        times: {
+          miliseconds: miliseconds,
+          seconds: seconds,
+          minutes: minutes
+        }
+      });
     }
   }, {
     key: "stop",
