@@ -24,10 +24,8 @@ var Stopwatch = function (_React$Component) {
         seconds: 0,
         miliseconds: 0
       }
-      // this.start = this.start.bind(this);
-      // this.stop = this.stop.bind(this);
-      // this.reset = this.reset.bind(this);
-    };return _this;
+    };
+    return _this;
   }
 
   _createClass(Stopwatch, [{
@@ -105,7 +103,7 @@ var Stopwatch = function (_React$Component) {
 
       return React.createElement(
         "div",
-        null,
+        { className: "container" },
         React.createElement(
           "nav",
           { className: "controls" },
@@ -131,7 +129,11 @@ var Stopwatch = function (_React$Component) {
             "Reset"
           )
         ),
-        React.createElement("div", { className: "stopwatch" }),
+        React.createElement(
+          "div",
+          { className: "stopwatch" },
+          this.format()
+        ),
         React.createElement("ul", { className: "results" })
       );
     }

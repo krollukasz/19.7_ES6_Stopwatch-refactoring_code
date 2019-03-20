@@ -10,9 +10,6 @@ class Stopwatch extends React.Component {
         miliseconds: 0
       }
     }
-    // this.start = this.start.bind(this);
-    // this.stop = this.stop.bind(this);
-    // this.reset = this.reset.bind(this);
   }
 
   format() {
@@ -69,14 +66,14 @@ class Stopwatch extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <nav className="controls">
           <a href="#" className="button start" id="start" onClick={() => this.start()}>Start</a>
           <a href="#" className="button stop" id="stop" onClick={() => this.stop()}>Stop</a>
           <a href="#" className="button reset" id="reset" onClick={() => this.reset()}>Reset</a>
         </nav>
 
-        <div className="stopwatch"></div>
+        <div className="stopwatch">{this.format()}</div>
         <ul className="results"></ul>
       </div>
     );
