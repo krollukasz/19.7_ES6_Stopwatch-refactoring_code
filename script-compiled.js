@@ -43,7 +43,7 @@ var Stopwatch = function (_React$Component) {
       if (!this.state.running) {
         this.setState({ running: true });
         this.watch = setInterval(function () {
-          return _this2.step();
+          return _this2.calculate();
         }, 10);
       }
     }
